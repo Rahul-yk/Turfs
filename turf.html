@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THE YARD — Sports Turf</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080b09;color:#f2f5f1;font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;height:74px;padding:0 7%;display:flex;justify-content:space-between;align-items:center;background:#080b09dd;border-bottom:1px solid #273128;backdrop-filter:blur(12px)}
+.logo{font-size:25px;font-weight:900;letter-spacing:2px}.logo span{color:#8fca62}.links{display:flex;gap:28px;font-size:12px;letter-spacing:1.5px;color:#aeb7ae}.links a:hover{color:#9bd56b}
+.hero{min-height:100vh;padding:145px 7% 80px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;background:radial-gradient(circle at 80% 25%,#244126 0,#080b09 43%)}
+.kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#9bd56b;font-weight:700}.hero h1{font-size:clamp(55px,8vw,105px);line-height:.9;letter-spacing:-5px;margin:18px 0;max-width:850px}.hero p{max-width:560px;color:#9ca69d;font-size:18px;line-height:1.8}.btn{display:inline-block;padding:14px 23px;border:1px solid #536052;margin:20px 8px 0 0;font-size:13px;font-weight:800}.primary{background:#9bd56b;color:#0b1109;border-color:#9bd56b}
+.hero-art{height:560px;position:relative;overflow:hidden;border:1px solid #405440;background:linear-gradient(145deg,#214a27,#0d180f);display:flex;align-items:center;justify-content:center}
+.pitch{width:78%;height:70%;border:3px solid #d5e5d0;position:relative;background:repeating-linear-gradient(90deg,#1c5828 0,#1c5828 12%,#1a5025 12%,#1a5025 24%);box-shadow:0 0 70px #143519}
+.pitch:before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:3px solid #d5e5d0}.pitch:after{content:"";position:absolute;width:125px;height:125px;border:3px solid #d5e5d0;border-radius:50%;left:calc(50% - 62px);top:calc(50% - 62px)}
+.ball{position:absolute;width:46px;height:46px;border-radius:50%;background:#f1f4ef;left:27%;top:27%;box-shadow:0 0 0 5px #b9d8a8}
+section{padding:105px 7%}.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.head h2{font-size:48px;margin:0}.head p{max-width:480px;color:#89948a}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{border:1px solid #29352b;background:#101610;padding:30px;min-height:190px}.number{color:#8fca62;font-size:12px;font-weight:800}.feature h3{font-size:25px;margin:12px 0}.feature p{color:#89948a}
+.book{background:#eef3eb;color:#10140f}.book .head p{color:#687169}.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.slot{background:#fff;border:1px solid #d5ddd1;padding:25px;color:#111}.slot strong{display:block;font-size:18px}.slot span{display:block;color:#6d766f;font-size:13px;margin-top:6px}.slot .time{margin-top:25px;font-size:25px;font-weight:900;color:#3e7b35}
+.gallery{display:grid;grid-template-columns:1.3fr .85fr .85fr;grid-template-rows:210px 210px;gap:15px}.gallery div{background:#234b29;border:1px solid #344e37}.gallery div:nth-child(1){grid-row:span 2;background:linear-gradient(145deg,#2e7036,#102714)}.gallery div:nth-child(2){background:linear-gradient(145deg,#456b39,#1a2918)}.gallery div:nth-child(3){background:linear-gradient(145deg,#294e3b,#111b15)}.gallery div:nth-child(4){background:linear-gradient(145deg,#55703d,#182416)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-art{height:390px;background:linear-gradient(145deg,#1d3822,#0d110e);border:1px solid #344337;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:900;letter-spacing:5px}.about p{color:#919b92;line-height:1.9}.facts{display:flex;gap:45px;margin-top:28px}.facts b{display:block;font-size:28px;color:#9bd56b}.facts span{color:#778178;font-size:13px}
+.contact{text-align:center;background:#111811}.contact h2{font-size:clamp(45px,7vw,80px);line-height:.95;margin:15px 0}.contact p{color:#89948a}.contact .btn{margin-top:15px}
+footer{padding:25px 7%;border-top:1px solid #273128;color:#69736b;display:flex;justify-content:space-between;font-size:12px}
+@media(max-width:850px){.links{display:none}.hero,.about{grid-template-columns:1fr}.features{grid-template-columns:1fr}.slots{grid-template-columns:1fr 1fr}.hero-art{height:390px}.head{display:block}.head p{margin-top:10px}}
+@media(max-width:500px){.slots{grid-template-columns:1fr}.gallery{grid-template-columns:1fr;grid-template-rows:180px 180px 180px 180px}.gallery div:nth-child(1){grid-row:auto}.hero h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">THE <span>YARD</span></div><div class="links"><a href="#facilities">FACILITIES</a><a href="#gallery">GALLERY</a><a href="#booking">BOOK</a><a href="#contact">CONTACT</a></div></nav>
+
+<header class="hero">
+<div><div class="kicker">Football • Cricket • Futsal</div><h1>Where the game gets serious.</h1><p>Premium turf space for matches, training sessions, tournaments and late-night games with friends.</p><a class="btn primary" href="#booking">Book Your Slot</a><a class="btn" href="#facilities">Explore Turf</a></div>
+<div class="hero-art"><div class="pitch"><div class="ball"></div></div></div>
+</header>
+
+<section id="facilities">
+<div class="head"><h2>The Experience</h2><p>A complete showcase for a turf business — facilities, pricing, gallery, availability and direct booking.</p></div>
+<div class="features">
+<div class="feature"><div class="number">01</div><h3>Premium Turf</h3><p>Professional playing surface designed for fast, comfortable games.</p></div>
+<div class="feature"><div class="number">02</div><h3>Flood Lights</h3><p>High-quality lighting for evening and late-night matches.</p></div>
+<div class="feature"><div class="number">03</div><h3>Changing Area</h3><p>Convenient facilities for teams before and after the game.</p></div>
+<div class="feature"><div class="number">04</div><h3>Parking</h3><p>Easy access with convenient parking for players and visitors.</p></div>
+<div class="feature"><div class="number">05</div><h3>Team Bookings</h3><p>Regular slots for clubs, schools, groups and corporate teams.</p></div>
+<div class="feature"><div class="number">06</div><h3>Tournaments</h3><p>A ready venue for local leagues, tournaments and events.</p></div>
+</div>
+</section>
+
+<section class="book" id="booking">
+<div class="head"><h2>Book a Slot</h2><p>Demo availability panel. Real-time slots and prices can be connected to WhatsApp or an online booking system.</p></div>
+<div class="slots">
+<div class="slot"><strong>Today</strong><span>Evening</span><div class="time">6:00 PM</div></div>
+<div class="slot"><strong>Today</strong><span>Evening</span><div class="time">8:00 PM</div></div>
+<div class="slot"><strong>Tomorrow</strong><span>Morning</span><div class="time">9:00 AM</div></div>
+<div class="slot"><strong>Tomorrow</strong><span>Night</span><div class="time">9:00 PM</div></div>
+</div>
+<a class="btn primary" href="https://wa.me/919876543210">Check Availability</a>
+</section>
+
+<section id="gallery">
+<div class="head"><h2>Inside The Yard</h2><p>Replace these visual panels with the turf owner's real photos, videos and match highlights.</p></div>
+<div class="gallery"><div></div><div></div><div></div><div></div></div>
+</section>
+
+<section><div class="about"><div class="about-art">PLAY<br>HARD</div><div><div class="kicker">Built For The Game</div><h2 style="font-size:48px">More than a turf.</h2><p>A dedicated section for the owner's story, location, rules, packages and what makes the venue different.</p><div class="facts"><div><b>7v7</b><span>Match Format</span></div><div><b>24/7</b><span>Flexible Hours</span></div><div><b>100%</b><span>Game Time</span></div></div></div></div></section>
+
+<section class="contact" id="contact"><div class="kicker">Bookings • Teams • Events</div><h2>Bring your team.<br>We'll bring the game.</h2><p>For bookings, tournaments and group enquiries.</p><a class="btn primary" href="https://wa.me/919876543210">WhatsApp</a><a class="btn" href="tel:+919876543210">Call</a></section>
+<footer><span>© 2026 THE YARD</span><span>Sample Website</span></footer>
+</body>
+</html>
